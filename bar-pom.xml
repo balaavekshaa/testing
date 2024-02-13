@@ -7,17 +7,19 @@
     <artifactId>mybar</artifactId>
     <version>0.1.2</version>
     <packaging>pom</packaging>
-<repositories>
-    
-       <repository>
-	<id>github</id>
-	<name>GitHub Packages</name>
-	<url>https://maven.pkg.github.com/balaavekshaa/testing</url>
-	<releases><enabled>true</enabled></releases>
-	<snapshots><enabled>true</enabled></snapshots>
-       </repository>
-    
-    </repositories>
+   <profiles>
+    <profile>
+        <id>custom-repo</id>
+        <repositories>
+            <repository>
+               <id>github</id>
+		<name>GitHub Packages</name>
+		<url>https://maven.pkg.github.com/balaavekshaa/testing</url>
+            </repository>
+        </repositories>
+    </profile>
+</profiles>
+
     <build>
         <plugins>
             <!-- Attach the BAR file as an artifact -->

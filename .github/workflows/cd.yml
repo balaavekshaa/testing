@@ -1,0 +1,25 @@
+# .github/workflows/cd.yml
+name: Continuous Deployment
+
+on:
+  workflow_run:
+    workflows: ["sample"]
+    branches: [main]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Set up Ansible
+        run: |
+          sudo apt-get update
+          sudo apt-get install ansible -y
+
+      - name: Run Ansible Playbook
+        run: ansible-playbook -i inventory/production playbook.yml

@@ -1,4 +1,4 @@
-name: sample
+name: upload-dependencies
 on:
   workflow_dispatch:
     

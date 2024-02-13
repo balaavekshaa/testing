@@ -42,17 +42,7 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       
 
-      - name: Publish to jplugin2
-        run: mvn org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M1:deploy-file -Dfile=lib/jplugin2.jar  -DskipTests -Dmaven.install.skip=true  -DgroupId=com.ibm.server -DartifactId=jplugin2  -Dversion=12.0.8.0 -Dpackaging=jar -Durl=https://maven.pkg.github.com/balaavekshaa/testing -DrepositoryId=github
-        env:
-          GITHUB_TOKEN: ${{ secrets.TESTSECRET }}
-        
-
-          
-      - name: Publish to javacompute 
-        run: mvn org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M1:deploy-file -Dfile=lib/javacompute.jar  -DskipTests -Dmaven.install.skip=true  -DgroupId=com.ibm.server -DartifactId=javacompute  -Dversion=12.0.8.0 -Dpackaging=jar -Durl=https://maven.pkg.github.com/balaavekshaa/testing -DrepositoryId=github
-        env:
-          GITHUB_TOKEN: ${{ secrets.TESTSECRET }}
+     
           
       - name: Publish to IntegrationAPI
         run: mvn org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M1:deploy-file -Dfile=lib/IntegrationAPI.jar  -DskipTests -Dmaven.install.skip=true  -DgroupId=com.ibm.common -DartifactId=integrationAPI  -Dversion=12.0.8.0 -Dpackaging=jar -Durl=https://maven.pkg.github.com/balaavekshaa/testing -DrepositoryId=github

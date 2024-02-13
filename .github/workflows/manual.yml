@@ -55,6 +55,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.TESTSECRET }}
           
       - name: Publish to IntegrationAPI
-        run: mvn org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M1:deploy-file -Dfile=lib/IntegrationAPI.jar   -DskipTests -Dmaven.install.skip=true  -DgroupId=com.ibm.common -DartifactId=IntegrationAPI  -Dversion=12.0.8.0 -Dpackaging=jar -Durl=https://maven.pkg.github.com/balaavekshaa/testing -DrepositoryId=github
+        run: mvn org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M1:deploy-file -Dfile=lib/IntegrationAPI.jar  -DskipTests -Dmaven.install.skip=true  -DgroupId=com.ibm.common -DartifactId=integrationAPI  -Dversion=12.0.8.0 -Dpackaging=jar -Durl=https://maven.pkg.github.com/balaavekshaa/testing -DrepositoryId=github
         env:
           GITHUB_TOKEN: ${{ secrets.TESTSECRET }}

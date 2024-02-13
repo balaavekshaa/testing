@@ -6,9 +6,11 @@
 		  fork="true">
 			 <arg line="-a target\MyBAR-0.1.2.bar"/>
 			 <arg line="-k TestAPP2"/>
+			 
 			 <classpath>
-				<fileset dir="D:\software\lib" includes="IntegrationAPI.jar" /> 
-				<fileset dir="D:\software\lib" includes="javacompute.jar,jplugin2.jar" /> 
+			 
+				<fileset dir="lib" includes="IntegrationAPI.jar" /> 
+				<fileset dir="lib" includes="javacompute.jar,jplugin2.jar" /> 
 			 </classpath>
 	   </java>
 	</target>

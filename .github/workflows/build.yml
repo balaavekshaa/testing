@@ -30,9 +30,8 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       
-      - name: Build
-        run: ant -f build.xml
+      
       - name: Publish to GitHub Packages Apache Maven
-        run: mvn deploy -f bar-pom.xml
+        run: mvn clean exec:java deploy -f bar-pom.xml
         env:
           GITHUB_TOKEN: ${{ secrets.TESTSECRET }}

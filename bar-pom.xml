@@ -10,10 +10,12 @@
 <repositories>
     
        <repository>
-			<id>github</id>
-			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/balaavekshaa/testing</url>
-		</repository>
+	<id>github</id>
+	<name>GitHub Packages</name>
+	<url>https://maven.pkg.github.com/balaavekshaa/testing</url>
+	<releases><enabled>true</enabled></releases>
+	<snapshots><enabled>true</enabled></snapshots>
+       </repository>
     
     </repositories>
     <build>

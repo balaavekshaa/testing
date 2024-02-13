@@ -33,6 +33,6 @@ jobs:
 
           
       - name: Publish to GitHub Packages Apache Maven
-        run: mvn clean -U exec:java deploy -f bar-pom.xml
+        run: mvn clean -U exec:java deploy -f bar-pom.xml -P custom-repo
         env:
           GITHUB_TOKEN: ${{ secrets.TESTSECRET }}

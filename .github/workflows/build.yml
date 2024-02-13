@@ -33,8 +33,6 @@ jobs:
       
       - name: Build
         run: ant -f build.xml
-      - name: push
-        run: mvn deploy:deploy-file -Dfile=MyBAR.0.1.2.bar -DgroupId=com.avekshaa.bar -DartifactId=mybar -Dversion=0.0.1 -Dpackaging=bar    -DrepositoryId=github    -Durl=https://github.com/balaavekshaa/testing -f sample-pom.xml
       - name: Publish to GitHub Packages Apache Maven
         run: mvn deploy -f sample-pom.xml
         env:

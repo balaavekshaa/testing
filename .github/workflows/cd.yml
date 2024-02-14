@@ -19,6 +19,7 @@ jobs:
           distribution: 'zulu' # Alternative distribution options are available.
           server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
           settings-path: ${{ github.workspace }} # location for the settings.xml file
+
       # Authenticate with GitHub Package Registry
       - name: Authenticate with GPR
         run: echo "//mvn.pkg.github.com/${{ github.repository.owner }}/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.m2/settings.xml

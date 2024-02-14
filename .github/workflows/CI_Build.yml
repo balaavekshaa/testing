@@ -29,10 +29,10 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       - name: Build Bar
-        run: mvn clean -U exec:java -f bar-pom.xml
+        run: mvn clean -U exec:java -f bar-pom.xml -Dregistry=https://maven.pkg.github.com/balaavekshaa
         env:
           GITHUB_TOKEN: ${{ secrets.TESTSECRET }}
       - name: publish artifact 
-        run: mvn deploy -f bar-pom.xml -Dtoken=$GITHUB_TOKEN
+        run: mvn deploy -f bar-pom.xml -Dtoken=$GITHUB_TOKEN -Dregistry=https://maven.pkg.github.com/balaavekshaa
         env:
           GITHUB_TOKEN: ${{ secrets.TESTSECRET }}

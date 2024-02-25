@@ -32,9 +32,9 @@ jobs:
 
       - name: Publish to GitHub Packages Apache Maven
         run: |
-            mvn org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M1:deploy-file -Dfile=jplugin2.jar -Dtypes=jar -DgroupId=com.ibm.server -DartifactId=jplugin2  -Dversion=12.0.8.0 -Dpackaging=jar -Durl=https://maven.pkg.github.com/balaavekshaa/testing -DrepositoryId=github
-            mvn org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M1:deploy-file -Dfile=javacompute.jar -Dtypes=jar -DgroupId=com.ibm.server -DartifactId=javacompute  -Dversion=12.0.8.0 -Dpackaging=jar -Durl=https://maven.pkg.github.com/balaavekshaa/testing -DrepositoryId=github
-            mvn org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M1:deploy-file -Dfile=IntegrationAPI.jar -Dtypes=jar -DgroupId=com.ibm.common -DartifactId=IntegrationAPI  -Dversion=12.0.8.0 -Dpackaging=jar -Durl=https://maven.pkg.github.com/balaavekshaa/testing -DrepositoryId=github
+            mvn org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M1:deploy-file -Dfile=jplugin2.jar  -DgroupId=com.ibm.server -DartifactId=jplugin2  -Dversion=12.0.8.0 -Dpackaging=jar -Durl=https://maven.pkg.github.com/balaavekshaa/testing -DrepositoryId=github
+            mvn org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M1:deploy-file -Dfile=javacompute.jar  -DgroupId=com.ibm.server -DartifactId=javacompute  -Dversion=12.0.8.0 -Dpackaging=jar -Durl=https://maven.pkg.github.com/balaavekshaa/testing -DrepositoryId=github
+            mvn org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M1:deploy-file -Dfile=IntegrationAPI.jar  -DgroupId=com.ibm.common -DartifactId=IntegrationAPI  -Dversion=12.0.8.0 -Dpackaging=jar -Durl=https://maven.pkg.github.com/balaavekshaa/testing -DrepositoryId=github
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

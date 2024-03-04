@@ -37,4 +37,4 @@ jobs:
             mvn org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M1:deploy-file -Dfile=IntegrationAPI.jar  -DgroupId=com.ibm.common -DartifactId=IntegrationAPI  -Dversion=12.0.8.1 -Dpackaging=jar -Durl=https://maven.pkg.github.com/balaavekshaa/testing -DrepositoryId=github
 
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}

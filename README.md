@@ -1,1 +1,1 @@
-Bar file build
+Bar file build example

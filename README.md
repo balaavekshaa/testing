@@ -1,1 +1,1 @@
-GOOD morning
+Bar file example
